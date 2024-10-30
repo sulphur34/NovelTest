@@ -144,3 +144,26 @@ MonoBehaviour:
     - name: ScriptNavigatorUI
       pathPrefix: UI
       guid: 735d6aa767879aa469134858c5b2f0a7
+  - Id: Scripts
+    Resources:
+    - name: NewScript
+      pathPrefix: Scripts
+      guid: b157904aec5841e4d908444671a8e1b0
+  - Id: Backgrounds/e166f5a6-7be0-40c0-8293-0ab268903f27
+    Resources:
+    - name: MainBackground
+      pathPrefix: Backgrounds/MainBackground
+      guid: ddc0f9b00fe1fde4f8937312f63388f0
+    - name: MainBackground1
+      pathPrefix: Backgrounds/MainBackground
+      guid: 42087cbc0d43c9a4e9d75e666a9135bf
+  - Id: Characters/58ea1c1c-51b3-4c70-b678-4779724aa191
+    Resources:
+    - name: OldChief
+      pathPrefix: Characters/OldChief
+      guid: 6bebc2db5e099ff458aa082d1c54e376
+  - Id: Characters/6e12f5ad-6fb6-4b90-9d2c-140933a93924
+    Resources:
+    - name: FreshMeat
+      pathPrefix: 'Characters/Freshmeat '
+      guid: 940b54b380e807a43997af482f1c9945

@@ -12,19 +12,25 @@ npc: "Why do we paint everyfink red, eh?"
 @set "choice4=\"Cuz our skin is green! Don’t need no more reason than dat!\""
 
 @choice {choice1} goto:.WrongAnswer set:response=choice1
-@choice "{choice2}" goto:.WrongAnswer set:response=choice2
-@choice "{choice3}" goto:.RightAnswer set:response=choice3
-@choice "{choice4}" goto:.WrongAnswer set:response=choice4
+@choice {choice2} goto:.WrongAnswer set:response=choice2
+@choice {choice3} goto:.RightAnswer set:response=choice3
+@choice {choice4} goto:.WrongAnswer set:response=choice4
 @stop
 
 # RightAnswer
 player: "{response}"
 npc: "Oi, ya got it now, ironhead! Yer ready ta krump an’ smash!"
 npc: "Now quit jabberin’ an’ go round up yer boyz! Time ta stomp into da battlefield!"
+@addScore
+@goto GetCrew
 @stop
 
 # WrongAnswer
 player: "{response}"
 npc: "NO, YA GIT!"
 npc: "It’s cuz red makes ya go fasta, ya zoggin’ dumb grotz!"
+@goto GetCrew
 @stop
+
+# GetCrew
+npc: "Ya need to gather yer mob! Go out an’ find 'em, ya git!"

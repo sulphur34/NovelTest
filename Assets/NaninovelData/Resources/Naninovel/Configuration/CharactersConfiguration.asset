@@ -65,8 +65,8 @@ MonoBehaviour:
     Poses: []
   Metadata:
     ids:
-    - OldChief
-    - 'Freshmeat '
+    - npc
+    - player
     metas:
     - Implementation: Naninovel.SpriteCharacter, Elringus.Naninovel.Runtime, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
@@ -77,11 +77,11 @@ MonoBehaviour:
           Culture=neutral, PublicKeyToken=null
         - Naninovel.ProjectResourceProvider, Elringus.Naninovel.Runtime, Version=0.0.0.0,
           Culture=neutral, PublicKeyToken=null
-      guid: 58ea1c1c-51b3-4c70-b678-4779724aa191
+      guid: a9696b7d-6501-4caf-bb6a-37b4f00ece8d
       customData:
         rid: -2
-      Pivot: {x: 0.5, y: 0}
-      PixelsPerUnit: 100
+      Pivot: {x: 0.5, y: -0.5}
+      PixelsPerUnit: 200
       EnableDepthPass: 1
       DepthAlphaCutoff: 0.5
       CustomTextureShader: {fileID: 0}
@@ -94,11 +94,11 @@ MonoBehaviour:
         width: 1
         height: 1
       BakedLookDirection: 2
-      DisplayName: Old chief
-      UseCharacterColor: 0
-      NameColor: {r: 1, g: 1, b: 1, a: 1}
-      MessageColor: {r: 1, g: 1, b: 1, a: 1}
-      HighlightWhenSpeaking: 0
+      DisplayName: Old Chief
+      UseCharacterColor: 1
+      NameColor: {r: 0.6462264, g: 0, b: 0, a: 1}
+      MessageColor: {r: 0.64705884, g: 0, b: 0, a: 1}
+      HighlightWhenSpeaking: 1
       HighlightCharacterCount: 0
       SpeakingPose: 
       NotSpeakingPose: 
@@ -122,8 +122,8 @@ MonoBehaviour:
       guid: 6e12f5ad-6fb6-4b90-9d2c-140933a93924
       customData:
         rid: -2
-      Pivot: {x: 0.5, y: 0}
-      PixelsPerUnit: 100
+      Pivot: {x: 0.5, y: -1}
+      PixelsPerUnit: 200
       EnableDepthPass: 1
       DepthAlphaCutoff: 0.5
       CustomTextureShader: {fileID: 0}
@@ -136,11 +136,11 @@ MonoBehaviour:
         width: 1
         height: 1
       BakedLookDirection: 1
-      DisplayName: Fresh meat
-      UseCharacterColor: 0
-      NameColor: {r: 1, g: 1, b: 1, a: 1}
-      MessageColor: {r: 1, g: 1, b: 1, a: 1}
-      HighlightWhenSpeaking: 0
+      DisplayName: Fresh Meat
+      UseCharacterColor: 1
+      NameColor: {r: 0.16398183, g: 0.2235823, b: 0.5188679, a: 1}
+      MessageColor: {r: 0.16470589, g: 0.22352943, b: 0.5176471, a: 1}
+      HighlightWhenSpeaking: 1
       HighlightCharacterCount: 0
       SpeakingPose: 
       NotSpeakingPose: 
@@ -150,7 +150,7 @@ MonoBehaviour:
       MessageSound: 
       MessageSoundPlayback: 0
       VoiceSource: {fileID: 0}
-      LinkedPrinter: 
+      LinkedPrinter: Dialogue
       Poses: []
   AvatarLoader:
     PathPrefix: CharacterAvatars

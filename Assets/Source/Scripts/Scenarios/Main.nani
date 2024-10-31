@@ -1,0 +1,30 @@
+@back MainBackground
+
+@char npc.Default pose:CenterLeft
+@char player.Default pose:CenterRight
+
+npc: "Oi, listen up, ya runt! Got one question ta see if yer cut out ta be a real warboss."
+npc: "Why do we paint everyfink red, eh?"
+
+@set "choice1=\"Cuz it’s da color of our blood, makes us strong an’ brave in a scrap! ya say?\""
+@set "choice2=\"Cuz we ain’t got no zoggin’ blue paint!\""
+@set "choice3=\"We paint it red ‘cuz red goes fasta!\""
+@set "choice4=\"Cuz our skin is green! Don’t need no more reason than dat!\""
+
+@choice {choice1} goto:.WrongAnswer set:response=choice1
+@choice "{choice2}" goto:.WrongAnswer set:response=choice2
+@choice "{choice3}" goto:.RightAnswer set:response=choice3
+@choice "{choice4}" goto:.WrongAnswer set:response=choice4
+@stop
+
+# RightAnswer
+player: "{response}"
+npc: "Oi, ya got it now, ironhead! Yer ready ta krump an’ smash!"
+npc: "Now quit jabberin’ an’ go round up yer boyz! Time ta stomp into da battlefield!"
+@stop
+
+# WrongAnswer
+player: "{response}"
+npc: "NO, YA GIT!"
+npc: "It’s cuz red makes ya go fasta, ya zoggin’ dumb grotz!"
+@stop

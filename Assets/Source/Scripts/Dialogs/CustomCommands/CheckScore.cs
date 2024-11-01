@@ -1,6 +1,6 @@
 using Naninovel;
 
-namespace Source.Scripts.CustomCommands
+namespace Dialogs.CustomCommands
 {
     [CommandAlias("checkScore")]
     public class CheckScore : Command

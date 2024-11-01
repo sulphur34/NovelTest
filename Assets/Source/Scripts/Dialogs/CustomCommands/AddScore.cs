@@ -1,6 +1,7 @@
 using Naninovel;
+using UnityEngine;
 
-namespace Source.Scripts.CustomCommands
+namespace Dialogs.CustomCommands
 {
     [CommandAlias("addScore")]
     public class AddScore : Command
@@ -14,6 +15,7 @@ namespace Source.Scripts.CustomCommands
                 int.Parse(variableManager.GetVariableValue("playerScore")) : 0;
             currentScore += _addAmount;
             variableManager.SetVariableValue("playerScore", currentScore.ToString());
+            PlayerPrefs.SetInt("playerScore", currentScore);
             return UniTask.CompletedTask;
         }
     }

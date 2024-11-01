@@ -1,12 +1,10 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using Naninovel;
 using Source.Scripts.MemoryGame;
 using UnityEngine;
 using UnityEngine.UI;
 
-[InitializeAtRuntime]
 public class GameBuilder : MonoBehaviour, IGameBuilderInfo
 {
     private readonly int _attemptsAddStep = 1;
@@ -36,13 +34,18 @@ public class GameBuilder : MonoBehaviour, IGameBuilderInfo
 
     public void ResetBoard()
     {
+        SetAttempts(_config.AttemptsNumber);
+        _pairCount = 0;
+
+        if (_buttonsToPair == null)
+            return;
+
         foreach (var pair in _buttonsToPair)
         {
             Destroy(pair.gameObject);
         }
 
-        SetAttempts(_config.AttemptsNumber);
-        _pairCount = 0;
+        _buttonsToPair = null;
     }
 
     private void BuildButtons()

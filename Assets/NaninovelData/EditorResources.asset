@@ -149,6 +149,9 @@ MonoBehaviour:
     - name: Main
       pathPrefix: Scripts
       guid: b157904aec5841e4d908444671a8e1b0
+    - name: 
+      pathPrefix: Scripts
+      guid: 
   - Id: Backgrounds/e166f5a6-7be0-40c0-8293-0ab268903f27
     Resources:
     - name: MainBackground

@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91a1b6bed4dacf7499abe9cf5b68fa56, type: 3}
+  m_Name: GameConfig
+  m_EditorClassIdentifier: 
+  <OpenSprites>k__BackingField:
+  - {fileID: 21300000, guid: 67db7faa324deab47a23bdf9be4e97c7, type: 3}
+  - {fileID: 21300000, guid: 27dcd23c2e250f5419f0589be6ad76f1, type: 3}
+  - {fileID: 21300000, guid: a5719a5e8a0aaf74f814a6f0fd4919bf, type: 3}
+  - {fileID: 21300000, guid: 0dcfad7afc793e24ea565a8f1cb26d85, type: 3}
+  - {fileID: 21300000, guid: d2878d11175d87544a84260de7fe1bbd, type: 3}
+  - {fileID: 21300000, guid: 85c0b6b0c44ece64cb74d826d1831a73, type: 3}
+  - {fileID: 21300000, guid: 6f7f12fce52fd86458afa4ba015cc225, type: 3}
+  - {fileID: 21300000, guid: 66a995bc6f80b284f855bb4bf2e95558, type: 3}
+  - {fileID: 21300000, guid: 94be554d6a5458d4eb3b93c1eaab5ae0, type: 3}
+  - {fileID: 21300000, guid: 9bf41f9db38444341b56fcec280461a1, type: 3}
+  - {fileID: 21300000, guid: 8fa7ce0fc5a5afd4f851b10a3c212ea9, type: 3}
+  <PairsCount>k__BackingField: 9
+  <PairButtonPrefab>k__BackingField: {fileID: 7918632481789914893, guid: 5ebe21ad43997d74eb6858f8a26a35e1, type: 3}

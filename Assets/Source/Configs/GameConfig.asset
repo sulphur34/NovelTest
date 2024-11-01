@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91a1b6bed4dacf7499abe9cf5b68fa56, type: 3}
   m_Name: GameConfig
   m_EditorClassIdentifier: 
+  <PairButtonPrefab>k__BackingField: {fileID: 7918632481789914893, guid: 5ebe21ad43997d74eb6858f8a26a35e1, type: 3}
   <OpenSprites>k__BackingField:
   - {fileID: 21300000, guid: 67db7faa324deab47a23bdf9be4e97c7, type: 3}
   - {fileID: 21300000, guid: 27dcd23c2e250f5419f0589be6ad76f1, type: 3}
@@ -25,4 +26,4 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 9bf41f9db38444341b56fcec280461a1, type: 3}
   - {fileID: 21300000, guid: 8fa7ce0fc5a5afd4f851b10a3c212ea9, type: 3}
   <PairsCount>k__BackingField: 9
-  <PairButtonPrefab>k__BackingField: {fileID: 7918632481789914893, guid: 5ebe21ad43997d74eb6858f8a26a35e1, type: 3}
+  <AttemptsNumber>k__BackingField: 5

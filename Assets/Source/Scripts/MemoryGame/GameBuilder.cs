@@ -1,19 +1,22 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Naninovel;
 using Source.Scripts.MemoryGame;
 using UnityEngine;
 using UnityEngine.UI;
 
+[InitializeAtRuntime]
 public class GameBuilder : MonoBehaviour, IGameBuilderInfo
 {
     private readonly int _attemptsAddStep = 1;
 
+    [SerializeField] private Canvas _gameCanvas;
     [SerializeField] private GameConfig _config;
     [SerializeField] private GridLayoutGroup _gameBoard;
     [SerializeField] private Image _lockScreen;
 
-    private List<PairButton> _buttonsToPair = new ();
+    private List<PairButton> _buttonsToPair;
     private int _pairCount;
     private PairButton _openButton;
     private Coroutine _coroutine;
@@ -23,21 +26,29 @@ public class GameBuilder : MonoBehaviour, IGameBuilderInfo
     public event Action Won;
     public event Action Lost;
 
-
-    private void Awake()
+    public void BuildBoard()
     {
-        BuildBoard();
-    }
-
-    private void BuildBoard()
-    {
+        _gameCanvas.enabled = true;
         SetAttempts(_config.AttemptsNumber);
         BuildButtons();
         PlaceOnBoard();
     }
 
+    public void ResetBoard()
+    {
+        foreach (var pair in _buttonsToPair)
+        {
+            Destroy(pair.gameObject);
+        }
+
+        SetAttempts(_config.AttemptsNumber);
+        _pairCount = 0;
+    }
+
     private void BuildButtons()
     {
+        _buttonsToPair = new List<PairButton>();
+
         for (int i = 0; i < _config.PairsCount; i++)
         {
             var sprite = _config.OpenSprites[i];
@@ -76,6 +87,7 @@ public class GameBuilder : MonoBehaviour, IGameBuilderInfo
             _openButton = null;
             _pairCount++;
             AddAttempts();
+
             if (_pairCount >= _config.PairsCount)
                 OnWin();
 

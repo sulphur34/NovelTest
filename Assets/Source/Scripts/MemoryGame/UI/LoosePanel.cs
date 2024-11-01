@@ -2,9 +2,14 @@ namespace Source.Scripts.MemoryGame
 {
     public class LoosePanel : GameEndPanel
     {
-        protected override void Initialize(IGameBuilderInfo gameBuilder)
+        protected override void Initialize()
         {
-            gameBuilder.Lost += ShowPanel;
+            GameBuilderInfo.Lost += ShowPanel;
+        }
+
+        private void OnDestroy()
+        {
+            GameBuilderInfo.Lost -= ShowPanel;
         }
     }
 }

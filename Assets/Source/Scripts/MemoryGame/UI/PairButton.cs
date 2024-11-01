@@ -21,6 +21,13 @@ namespace Source.Scripts.MemoryGame
         public bool IsOpen { get; private set; }
         public bool IsPaired { get; private set; }
 
+        private void OnDestroy()
+        {
+
+            _button.onClick.RemoveListener(OnButtonClick);
+            _pair.Opened -= OnPairOpen;
+        }
+
         public void Initialize(Sprite openSprite, PairButton pair)
         {
             _button = GetComponent<Button>();

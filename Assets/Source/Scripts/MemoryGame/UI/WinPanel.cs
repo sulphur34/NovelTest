@@ -1,10 +1,17 @@
+using System;
+
 namespace Source.Scripts.MemoryGame
 {
     public class WinPanel : GameEndPanel
     {
-        protected override void Initialize(IGameBuilderInfo gameBuilder)
+        protected override void Initialize()
         {
-            gameBuilder.Won += ShowPanel;
+            GameBuilderInfo.Won += ShowPanel;
+        }
+
+        private void OnDestroy()
+        {
+            GameBuilderInfo.Won -= ShowPanel;
         }
     }
 }

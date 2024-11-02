@@ -1,4 +1,5 @@
 @back MainBackground
+@bgm Main
 
 @char npc.Default pose:CenterLeft
 @char player.Default pose:CenterRight

@@ -172,3 +172,8 @@ MonoBehaviour:
       guid: 6bebc2db5e099ff458aa082d1c54e376
   - Id: Unlockables
     Resources: []
+  - Id: Audio
+    Resources:
+    - name: Main
+      pathPrefix: Audio
+      guid: f621fe2dd2b66094aa016d76ce40282d

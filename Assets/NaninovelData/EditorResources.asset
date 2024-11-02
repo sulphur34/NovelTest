@@ -42,7 +42,7 @@ MonoBehaviour:
     Resources:
     - name: ButtonList
       pathPrefix: ChoiceHandlers
-      guid: 1f6aa29000e839c409e6a9c0704adc96
+      guid: 51c0190854af2d444a7270a74992ee43
   - Id: ChoiceHandlers/6d0acb76-070b-4055-8374-5aa2be59c806
     Resources:
     - name: ButtonArea
@@ -177,3 +177,13 @@ MonoBehaviour:
     - name: Main
       pathPrefix: Audio
       guid: f621fe2dd2b66094aa016d76ce40282d
+  - Id: TextPrinters/08a8be94-a503-4f40-8511-efdcd56bbeb0
+    Resources:
+    - name: Orc
+      pathPrefix: TextPrinters
+      guid: 6a3817678054cb74999bafd8bcffdd20
+  - Id: ChoiceHandlers/6e7f96cd-cc26-40bf-89c2-c18bcd5f129b
+    Resources:
+    - name: OrcList
+      pathPrefix: ChoiceHandlers
+      guid: d31f6605eae3d114bb4631cb4fdfa0ce

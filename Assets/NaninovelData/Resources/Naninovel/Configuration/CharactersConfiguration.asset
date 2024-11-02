@@ -80,7 +80,7 @@ MonoBehaviour:
       guid: a9696b7d-6501-4caf-bb6a-37b4f00ece8d
       customData:
         rid: -2
-      Pivot: {x: 0.5, y: -0.5}
+      Pivot: {x: 0, y: 0}
       PixelsPerUnit: 200
       EnableDepthPass: 1
       DepthAlphaCutoff: 0.5
@@ -96,8 +96,8 @@ MonoBehaviour:
       BakedLookDirection: 2
       DisplayName: Old Chief
       UseCharacterColor: 1
-      NameColor: {r: 1, g: 0.2971698, b: 0.2971698, a: 1}
-      MessageColor: {r: 1, g: 0.29803923, b: 0.29803923, a: 1}
+      NameColor: {r: 0.5754717, g: 0.22801708, b: 0.22801708, a: 1}
+      MessageColor: {r: 0.5764706, g: 0.227451, b: 0.227451, a: 1}
       HighlightWhenSpeaking: 1
       HighlightCharacterCount: 0
       SpeakingPose: 
@@ -108,8 +108,19 @@ MonoBehaviour:
       MessageSound: 
       MessageSoundPlayback: 0
       VoiceSource: {fileID: 0}
-      LinkedPrinter: 
-      Poses: []
+      LinkedPrinter: Orc
+      Poses:
+      - name: Default
+        actorState:
+          appearance: 
+          visible: 0
+          position: {x: -8.5, y: -1, z: 0}
+          rotation: {x: 0, y: 0, z: 0, w: 0}
+          scale: {x: 0, y: 0, z: 0}
+          tintColor: {r: 0, g: 0, b: 0, a: 0}
+          lookDirection: 0
+        overriddenProperties:
+        - position
     - Implementation: Naninovel.SpriteCharacter, Elringus.Naninovel.Runtime, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       Loader:
@@ -122,7 +133,7 @@ MonoBehaviour:
       guid: 6e12f5ad-6fb6-4b90-9d2c-140933a93924
       customData:
         rid: -2
-      Pivot: {x: 0.5, y: -1}
+      Pivot: {x: 0, y: 0}
       PixelsPerUnit: 200
       EnableDepthPass: 1
       DepthAlphaCutoff: 0.5
@@ -150,8 +161,19 @@ MonoBehaviour:
       MessageSound: 
       MessageSoundPlayback: 0
       VoiceSource: {fileID: 0}
-      LinkedPrinter: Dialogue
-      Poses: []
+      LinkedPrinter: Orc
+      Poses:
+      - name: Default
+        actorState:
+          appearance: 
+          visible: 0
+          position: {x: 2.7, y: 0, z: 0}
+          rotation: {x: 0, y: 0, z: 0, w: 0}
+          scale: {x: 0, y: 0, z: 0}
+          tintColor: {r: 0, g: 0, b: 0, a: 0}
+          lookDirection: 0
+        overriddenProperties:
+        - position
   AvatarLoader:
     PathPrefix: CharacterAvatars
     ProviderTypes:

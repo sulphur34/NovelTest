@@ -1,8 +1,9 @@
 @back MainBackground
 @bgm Main
+@printer Orc
 
-@char npc.Default pose:CenterLeft
-@char player.Default pose:CenterRight
+@char npc.Default pose:Default
+@char player.Default pose:Default
 
 npc: "Oi, listen up, ya runt! Got one question ta see if yer cut out ta be a real warboss."
 npc: "Why do we paint everyfink red, eh?"
@@ -14,10 +15,10 @@ npc: "Why do we paint everyfink red, eh?"
 @set "choice3=\"We paint it red ‘cuz red goes fasta!\""
 @set "choice4=\"Cuz our skin is green! Don’t need no more reason than dat!\""
 
-@choice {choice1} goto:.WrongAnswer set:response=choice1
-@choice {choice2} goto:.WrongAnswer set:response=choice2
-@choice {choice3} goto:.RightAnswer set:response=choice3
-@choice {choice4} goto:.WrongAnswer set:response=choice4
+@choice {choice1} handler:OrcList goto:.WrongAnswer set:response=choice1
+@choice {choice2} handler:OrcList goto:.WrongAnswer set:response=choice2
+@choice {choice3} handler:OrcList goto:.RightAnswer set:response=choice3
+@choice {choice4} handler:OrcList goto:.WrongAnswer set:response=choice4
 @stop
 
 # RightAnswer
@@ -38,12 +39,12 @@ npc: "It’s cuz red makes ya go fasta, ya zoggin’ dumb grotz!"
 # GetCrew
 npc: "Ya need to gather yer mob! Go out an’ find 'em, ya git!"
 
-@hidePrinter
+@hidePrinter 
 @hideChars
 @back GameBackground
 @startGame
-@char npc.Default pose:CenterLeft
-@char player.Default pose:CenterRight
+@char npc.Default pose:Default
+@char player.Default pose:Default
 @back MainBackground
 @if isGameWon
 npc: "Ya got yer mob together, nice work!"

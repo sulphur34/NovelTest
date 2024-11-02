@@ -76,7 +76,7 @@ public class GameBuilder : MonoBehaviour, IGameBuilderInfo
 
         foreach (var pair in _buttonsToPair)
         {
-            pair.transform.SetParent(_gameBoard.transform);
+            pair.transform.SetParent(_gameBoard.transform, false);
             pair.Opened += OnButtonPressed;
         }
     }

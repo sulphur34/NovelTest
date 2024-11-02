@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Dialogs.CustomCommands
 {
-    [CommandAlias("addScore")]
+    [CommandAlias(CommandNames.AddScore)]
     public class AddScore : Command
     {
         private readonly int _addAmount = 10;
@@ -11,11 +11,10 @@ namespace Dialogs.CustomCommands
         public override UniTask ExecuteAsync(AsyncToken asyncToken = default)
         {
             var variableManager = Engine.GetService<ICustomVariableManager>();
-            int currentScore = variableManager.VariableExists("playerScore") ?
-                int.Parse(variableManager.GetVariableValue("playerScore")) : 0;
+            int currentScore = variableManager.VariableExists(VariableNames.PlayerScore) ?
+                int.Parse(variableManager.GetVariableValue(VariableNames.PlayerScore)) : 0;
             currentScore += _addAmount;
-            variableManager.SetVariableValue("playerScore", currentScore.ToString());
-            PlayerPrefs.SetInt("playerScore", currentScore);
+            variableManager.SetVariableValue(VariableNames.PlayerScore, currentScore.ToString());
             return UniTask.CompletedTask;
         }
     }

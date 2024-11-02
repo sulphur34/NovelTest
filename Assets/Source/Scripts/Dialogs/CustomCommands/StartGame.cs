@@ -2,16 +2,36 @@ using Naninovel;
 
 namespace Dialogs.CustomCommands
 {
-    [CommandAlias("startGame")]
-    public class StartGame: Command
+    [CommandAlias(CommandNames.StartGame)]
+    public class StartGame : Command
     {
-        [field: ParameterAlias("gameWon")] public BooleanParameter GameWon { get; private set; }
+        private UniTaskCompletionSource _taskCompletionSource;
 
-        public override UniTask ExecuteAsync(AsyncToken asyncToken = default)
+        public override async UniTask ExecuteAsync(AsyncToken asyncToken = default)
         {
+            _taskCompletionSource = new UniTaskCompletionSource();
             var miniGameService = Engine.GetService<MiniGameService>();
             miniGameService.StartGame();
-            return UniTask.CompletedTask;
+            miniGameService.Lost += OnLoose;
+            miniGameService.Won += OnWin;
+            await _taskCompletionSource.Task;
+        }
+
+        private void OnLoose()
+        {
+            OnGameEnd(false);
+        }
+
+        private void OnWin()
+        {
+            OnGameEnd(true);
+        }
+
+        private void OnGameEnd(bool isWon)
+        {
+            var variableManager = Engine.GetService<ICustomVariableManager>();
+            variableManager.SetVariableValue(VariableNames.IsGameWon, isWon.ToString());
+            _taskCompletionSource.TrySetResult();
         }
     }
 }

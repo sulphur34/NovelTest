@@ -6,6 +6,8 @@
 npc: "Oi, listen up, ya runt! Got one question ta see if yer cut out ta be a real warboss."
 npc: "Why do we paint everyfink red, eh?"
 
+@checkScore
+
 @set "choice1=\"Cuz it’s da color of our blood, makes us strong an’ brave in a scrap! ya say?\""
 @set "choice2=\"Cuz we ain’t got no zoggin’ blue paint!\""
 @set "choice3=\"We paint it red ‘cuz red goes fasta!\""
@@ -35,4 +37,25 @@ npc: "It’s cuz red makes ya go fasta, ya zoggin’ dumb grotz!"
 # GetCrew
 npc: "Ya need to gather yer mob! Go out an’ find 'em, ya git!"
 
+@hidePrinter
+@hideChars
+@back GameBackground
 @startGame
+@char npc.Default pose:CenterLeft
+@char player.Default pose:CenterRight
+@back MainBackground
+@if isGameWon
+npc: "Ya got yer mob together, nice work!"
+player: "Oi, dat’s propa!"
+@addScore
+@else
+npc: "Didn’t get no mob together? Pathetic!"
+player: "Zog it..."
+@endif
+@checkScore
+@if result
+npc: "I’m proud of ya, ya git! You got what it takes to make a name on da battlefield!"
+@else
+npc: "Don’t quit yer first scrap! Just keep swingin’ ‘til ya can’t no more!"
+@endif
+@title

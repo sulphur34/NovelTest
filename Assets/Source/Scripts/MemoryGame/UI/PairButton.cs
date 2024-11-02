@@ -40,7 +40,9 @@ namespace Source.Scripts.MemoryGame
 
         public void Close()
         {
-            _image.sprite = _hideSprite;
+            if(_image != null)
+                _image.sprite = _hideSprite;
+
             IsOpen = false;
         }
 

@@ -34,6 +34,12 @@ public class GameBuilder : MonoBehaviour, IGameBuilderInfo
 
     public void ResetBoard()
     {
+        if (_coroutine != null)
+            StopCoroutine(_coroutine);
+
+        if(_gameCanvas != null)
+            _gameCanvas.enabled = false;
+
         SetAttempts(_config.AttemptsNumber);
         _pairCount = 0;
 
@@ -41,9 +47,7 @@ public class GameBuilder : MonoBehaviour, IGameBuilderInfo
             return;
 
         foreach (var pair in _buttonsToPair)
-        {
             Destroy(pair.gameObject);
-        }
 
         _buttonsToPair = null;
     }
@@ -89,38 +93,26 @@ public class GameBuilder : MonoBehaviour, IGameBuilderInfo
         {
             _openButton = null;
             _pairCount++;
-            AddAttempts();
+            SetAttempts(_attemptsAddStep);
 
             if (_pairCount >= _config.PairsCount)
-                OnWin();
+                Won?.Invoke();
 
             return;
         }
 
-        RemoveAttempts();
+        SetAttempts(-_attemptsAddStep);
 
         if (_attemptsLeft <= 0)
-            OnLoose();
+            Lost?.Invoke();
 
         LockButtons(button);
-    }
-
-    private void OnWin()
-    {
-        Won?.Invoke();
-    }
-
-    private void OnLoose()
-    {
-        Lost?.Invoke();
     }
 
     private void LockButtons(PairButton button)
     {
         if (_coroutine != null)
-        {
             StopCoroutine(_coroutine);
-        }
 
         _coroutine = StartCoroutine(ShowRoutine(button));
     }
@@ -133,16 +125,6 @@ public class GameBuilder : MonoBehaviour, IGameBuilderInfo
         button.Close();
         _openButton = null;
         _lockScreen.gameObject.SetActive(false);
-    }
-
-    private void AddAttempts()
-    {
-        SetAttempts(_attemptsAddStep);
-    }
-
-    private void RemoveAttempts()
-    {
-        SetAttempts(-_attemptsAddStep);
     }
 
     private void SetAttempts(int value)

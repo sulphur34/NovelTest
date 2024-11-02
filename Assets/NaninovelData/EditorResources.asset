@@ -156,10 +156,10 @@ MonoBehaviour:
     Resources:
     - name: MainBackground
       pathPrefix: Backgrounds/MainBackground
-      guid: ddc0f9b00fe1fde4f8937312f63388f0
+      guid: 436a02b80497df247aac73ec6f37556e
     - name: GameBackground
       pathPrefix: Backgrounds/MainBackground
-      guid: 42087cbc0d43c9a4e9d75e666a9135bf
+      guid: 18455dd8f1afbd941b359fb234f5340a
   - Id: Characters/6e12f5ad-6fb6-4b90-9d2c-140933a93924
     Resources:
     - name: Default

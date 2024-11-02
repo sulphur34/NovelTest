@@ -96,8 +96,8 @@ MonoBehaviour:
       BakedLookDirection: 2
       DisplayName: Old Chief
       UseCharacterColor: 1
-      NameColor: {r: 0.6462264, g: 0, b: 0, a: 1}
-      MessageColor: {r: 0.64705884, g: 0, b: 0, a: 1}
+      NameColor: {r: 1, g: 0.2971698, b: 0.2971698, a: 1}
+      MessageColor: {r: 1, g: 0.29803923, b: 0.29803923, a: 1}
       HighlightWhenSpeaking: 1
       HighlightCharacterCount: 0
       SpeakingPose: 
@@ -138,8 +138,8 @@ MonoBehaviour:
       BakedLookDirection: 1
       DisplayName: Fresh Meat
       UseCharacterColor: 1
-      NameColor: {r: 0.16398183, g: 0.2235823, b: 0.5188679, a: 1}
-      MessageColor: {r: 0.16470589, g: 0.22352943, b: 0.5176471, a: 1}
+      NameColor: {r: 0.4009434, g: 0.50078607, b: 1, a: 1}
+      MessageColor: {r: 0.40000004, g: 0.5019608, b: 1, a: 1}
       HighlightWhenSpeaking: 1
       HighlightCharacterCount: 0
       SpeakingPose: 

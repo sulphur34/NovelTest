@@ -157,7 +157,7 @@ MonoBehaviour:
     - name: MainBackground
       pathPrefix: Backgrounds/MainBackground
       guid: ddc0f9b00fe1fde4f8937312f63388f0
-    - name: MainBackground1
+    - name: GameBackground
       pathPrefix: Backgrounds/MainBackground
       guid: 42087cbc0d43c9a4e9d75e666a9135bf
   - Id: Characters/6e12f5ad-6fb6-4b90-9d2c-140933a93924

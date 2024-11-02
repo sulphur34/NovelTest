@@ -1,3 +1,4 @@
+using Dialogs.CustomServices;
 using Naninovel;
 
 namespace Dialogs.CustomCommands

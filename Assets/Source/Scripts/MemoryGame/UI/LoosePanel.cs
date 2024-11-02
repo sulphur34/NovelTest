@@ -1,4 +1,4 @@
-namespace Source.Scripts.MemoryGame
+namespace MemoryGame.UI
 {
     public class LoosePanel : GameEndPanel
     {

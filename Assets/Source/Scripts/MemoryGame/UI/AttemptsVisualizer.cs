@@ -1,9 +1,7 @@
-using System;
-using Naninovel;
 using TMPro;
 using UnityEngine;
 
-namespace Source.Scripts.MemoryGame
+namespace MemoryGame.UI
 {
     public class AttemptsVisualizer : MonoBehaviour
     {

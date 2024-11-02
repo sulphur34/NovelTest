@@ -1,7 +1,10 @@
 using System;
 
-public interface IGameBuilderInfo
+namespace MemoryGame
 {
-    event Action Won;
-    event Action Lost;
+    public interface IGameBuilderInfo
+    {
+        event Action Won;
+        event Action Lost;
+    }
 }

@@ -10,7 +10,7 @@ namespace Dialogs.CustomCommands
         public override UniTask ExecuteAsync(AsyncToken asyncToken = default)
         {
             var variableManager = Engine.GetService<ICustomVariableManager>();
-            bool result = int.Parse(variableManager.GetVariableValue(VariableNames.PlayerScore)) >= _threshold;
+            var result = int.Parse(variableManager.GetVariableValue(VariableNames.PlayerScore)) >= _threshold;
             variableManager.SetVariableValue(VariableNames.Result, result.ToString());
             return UniTask.CompletedTask;
         }

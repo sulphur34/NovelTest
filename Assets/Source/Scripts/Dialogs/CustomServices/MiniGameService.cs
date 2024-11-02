@@ -1,8 +1,9 @@
 using System;
+using MemoryGame;
 using Naninovel;
 using Object = UnityEngine.Object;
 
-namespace Dialogs
+namespace Dialogs.CustomServices
 {
     [InitializeAtRuntime]
     public class MiniGameService : IEngineService

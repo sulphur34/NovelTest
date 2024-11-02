@@ -1,10 +1,8 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Source.Scripts.MemoryGame
+namespace MemoryGame.UI
 {
     [RequireComponent(typeof(Button), typeof(Image))]
     public class PairButton : MonoBehaviour

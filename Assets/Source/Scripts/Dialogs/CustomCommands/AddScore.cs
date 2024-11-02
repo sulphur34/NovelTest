@@ -1,5 +1,4 @@
 using Naninovel;
-using UnityEngine;
 
 namespace Dialogs.CustomCommands
 {
@@ -11,7 +10,7 @@ namespace Dialogs.CustomCommands
         public override UniTask ExecuteAsync(AsyncToken asyncToken = default)
         {
             var variableManager = Engine.GetService<ICustomVariableManager>();
-            int currentScore = variableManager.VariableExists(VariableNames.PlayerScore) ?
+            var currentScore = variableManager.VariableExists(VariableNames.PlayerScore) ?
                 int.Parse(variableManager.GetVariableValue(VariableNames.PlayerScore)) : 0;
             currentScore += _addAmount;
             variableManager.SetVariableValue(VariableNames.PlayerScore, currentScore.ToString());

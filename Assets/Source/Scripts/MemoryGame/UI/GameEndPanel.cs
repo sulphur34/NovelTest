@@ -1,10 +1,9 @@
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-namespace Source.Scripts.MemoryGame
+namespace MemoryGame.UI
 {
     public abstract class GameEndPanel : MonoBehaviour
     {

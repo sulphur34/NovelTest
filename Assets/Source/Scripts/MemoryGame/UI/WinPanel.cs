@@ -1,6 +1,4 @@
-using System;
-
-namespace Source.Scripts.MemoryGame
+namespace MemoryGame.UI
 {
     public class WinPanel : GameEndPanel
     {

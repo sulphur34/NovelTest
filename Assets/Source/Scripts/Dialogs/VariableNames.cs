@@ -1,6 +1,6 @@
 namespace Dialogs
 {
-    public class VariableNames
+    public struct VariableNames
     {
         public const string PlayerScore = "playerScore";
         public const string Result = "result";
